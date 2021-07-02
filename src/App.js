@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import { useSelector, useDispatch } from "react-redux"
+import { decrement, increment } from "./counterSlice"
+import { useGetPokemonByNameQuery, usePostPokemonByNameTestMutation } from "./pokemonApi"
+import { useEffect } from "react"
+import { changeName } from "./PeopleSlice"
 
 function App() {
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
+  const { data, error, isLoading } = useGetPokemonByNameQuery("bulbasaur")
+  const [postPost, { data: dataPost, error: errorPost, isLoading: isLoadingPost }] = usePostPokemonByNameTestMutation()
+
+  useEffect(() => {
+    postPost({
+      name: "test",
+    })
+  }, [])
+  // console.log(isLoadingPost, errorPost, dataPost)
+
+  // console.log("dataPost, errorPost, isLoadingPost", dataPost, errorPost, isLoadingPost)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div>
+        <button
+          onClick={() => {
+            console.log(changeName())
+            dispatch(changeName("change"))
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          change name
+        </button>
+      </div>
+      <div>
+        <button aria-label="Increment value" onClick={() => dispatch(increment())}>
+          Increment
+        </button>
+        <span>{count}</span>
+        <button aria-label="Decrement value" onClick={() => dispatch(decrement())}>
+          Decrement
+        </button>
+      </div>
+
+      {error ? (
+        <>Oh no, there was an error</>
+      ) : isLoading ? (
+        <>Loading...</>
+      ) : data ? (
+        <>
+          <h3>{data.species.name}</h3>
+          <img src={data.sprites.front_shiny} alt={data.species.name} />
+        </>
+      ) : null}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
