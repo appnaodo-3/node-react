@@ -4,6 +4,9 @@
     <list default="true" id="1e493a13-8ef7-42d6-bc78-edfbdefd3f3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,8 @@
       <updated>1625131980901</updated>
       <workItem from="1625131984312" duration="651000" />
       <workItem from="1625187068470" duration="851000" />
+      <workItem from="1625446524438" duration="3074000" />
+      <workItem from="1625533471979" duration="433000" />
     </task>
     <servers />
   </component>
@@ -75,25 +80,21 @@
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/counterSlice.js</url>
           <line>18</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/counterSlice.js</url>
           <line>20</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>9</line>
-          <properties lambdaOrdinal="-1" />
+          <line>8</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>11</line>
-          <properties lambdaOrdinal="-1" />
+          <line>10</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

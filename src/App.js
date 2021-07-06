@@ -1,4 +1,3 @@
-import "./App.css"
 import { useSelector, useDispatch } from "react-redux"
 import { decrement, increment } from "./counterSlice"
 import { useGetPokemonByNameQuery, usePostPokemonByNameTestMutation } from "./pokemonApi"
