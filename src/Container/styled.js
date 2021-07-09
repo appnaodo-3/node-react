@@ -29,3 +29,13 @@ export const TableNote = styled.div`
     outline: 1px solid slategrey;
   }
 `
+
+export const HeaderProgress = styled.div`
+  font-weight: 500;
+  font-style: italic;
+`
+
+export const TitleSetting = styled.label`
+  font-weight: 700;
+  margin-right: 12px;
+`

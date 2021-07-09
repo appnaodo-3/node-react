@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
+import getDate from "../helper/getDate"
 
 const initialState = {
   setting: {
@@ -15,11 +16,11 @@ export const noteSlice = createSlice({
   reducers: {
     addNote: (state) => {
       const id = state.notes.length + 1
-      state.notes = [...state.notes, { id, content: "", theme: "DEFAULT", status: false }]
+      state.notes = [...state.notes, { id, content: "", theme: "DEFAULT", status: false, date: getDate(new Date()) }]
     },
     updateNote: (state, action) => {
       const {
-        payload: { id, content, status },
+        payload: { id, content, status, date },
       } = action
 
       state.notes = state.notes.map((note) => {
@@ -30,6 +31,7 @@ export const noteSlice = createSlice({
             id,
             content: content,
             status: status,
+            date: date,
           }
         }
 
@@ -43,10 +45,14 @@ export const noteSlice = createSlice({
 
       state.notes = state.notes.filter((note) => note.id !== id)
     },
+    updateAllNotes: (state, action) => {
+      const { payload: notes } = action
+      state.notes = notes
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addNote, deleteNote, updateNote } = noteSlice.actions
+export const { addNote, deleteNote, updateNote, updateAllNotes } = noteSlice.actions
 
 export default noteSlice.reducer
