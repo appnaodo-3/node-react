@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e493a13-8ef7-42d6-bc78-edfbdefd3f3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Note.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/NotePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/noteSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helper/isArrayHasValue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +44,11 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Container" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="webpack" type="JavascriptDebugType" uri="http://localhost:3001">
       <method v="2" />
@@ -51,6 +64,9 @@
       <updated>1625131980901</updated>
       <workItem from="1625131984312" duration="651000" />
       <workItem from="1625187068470" duration="851000" />
+      <workItem from="1625446524438" duration="3074000" />
+      <workItem from="1625533471979" duration="686000" />
+      <workItem from="1625540602625" duration="9468000" />
     </task>
     <servers />
   </component>
@@ -75,26 +91,12 @@
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/counterSlice.js</url>
           <line>18</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/counterSlice.js</url>
           <line>20</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>9</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>11</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -107,5 +109,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/todo$webpack.dat" NAME="webpack Coverage Results" MODIFIED="1625540661555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,11 +1,11 @@
-import React from "react"
+import React, { Suspense } from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
-import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import { store } from "./store"
 import { Provider } from "react-redux"
+import ErrorBoundary from "./ErrorBoundary"
 
 const theme = {
   main: "white",
@@ -18,12 +18,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const AppPage = React.lazy(() => import("./App"))
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <App />
+        <ErrorBoundary>
+          <GlobalStyle />
+          <Suspense fallback={<p style={{ color: "blue", fontSize: "18px" }}>loading...</p>}>
+            <AppPage />
+          </Suspense>
+        </ErrorBoundary>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>,
