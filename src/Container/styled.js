@@ -1,15 +1,15 @@
 import styled from "styled-components"
 
 export const HeaderSetting = styled.div`
-  height: 72px;
+  height: 100px;
 `
 
 export const TableNote = styled.div`
-  background: darkslategray;
+  background: ${(props) => props.theme};
   border: solid 10px black;
   border-radius: 10px;
   padding: 3px;
-  height: calc(100vh - 72px);
+  height: calc(100vh - 100px);
   overflow: auto;
 
   &:focus-visible {
