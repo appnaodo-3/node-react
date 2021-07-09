@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e493a13-8ef7-42d6-bc78-edfbdefd3f3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/NotePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/NotePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/noteSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/noteSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Container/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +69,7 @@
       <workItem from="1625540602625" duration="9804000" />
       <workItem from="1625643362296" duration="782000" />
       <workItem from="1625736517204" duration="1352000" />
-      <workItem from="1625791686698" duration="5477000" />
+      <workItem from="1625791686698" duration="6248000" />
     </task>
     <servers />
   </component>
@@ -107,7 +103,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Container/NotePage.js</url>
-          <line>33</line>
+          <line>34</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>

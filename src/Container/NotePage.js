@@ -7,6 +7,7 @@ import { addNote, deleteNote, settingTheme, updateAllNotes, updateNote } from ".
 import isArrayHasValue from "../helper/isArrayHasValue"
 import * as S from "./styled"
 import { SketchPicker, BlockPicker, CompactPicker } from "react-color"
+import { TitlePage } from "./styled"
 
 const OPTION_SHOW_NOTES = {
   all: "all",
@@ -74,6 +75,7 @@ const NotePage = () => {
 
   return (
     <div>
+      <S.TitlePage>Note app - remember for you</S.TitlePage>
       <S.HeaderSetting className="px-5 is-flex is-justify-content-space-between">
         <div>
           <button className="button is-info" onClick={handleAddNote}>
