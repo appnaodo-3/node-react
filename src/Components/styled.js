@@ -24,6 +24,16 @@ export const Header = styled.div`
     width: 24px;
   }
 
+  input[type="date"] {
+    background: transparent;
+    border: none;
+    width: fit-content;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
   button {
     background: transparent;
     border: none;
