@@ -4,7 +4,7 @@ import getDate from "../helper/getDate"
 const initialState = {
   setting: {
     theme: {
-      background: "",
+      background: "darkslategray",
     },
   },
   notes: [],
@@ -49,10 +49,16 @@ export const noteSlice = createSlice({
       const { payload: notes } = action
       state.notes = notes
     },
+    settingTheme: (state, action) => {
+      const {
+        payload: { color },
+      } = action
+      state.setting.theme.background = color
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addNote, deleteNote, updateNote, updateAllNotes } = noteSlice.actions
+export const { addNote, deleteNote, updateNote, updateAllNotes, settingTheme } = noteSlice.actions
 
 export default noteSlice.reducer

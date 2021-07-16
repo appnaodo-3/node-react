@@ -3,10 +3,11 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 
 import Note from "../Components/Note"
 import { useDispatch, useSelector } from "react-redux"
-import { addNote, deleteNote, updateAllNotes, updateNote } from "./noteSlice"
+import { addNote, deleteNote, settingTheme, updateAllNotes, updateNote } from "./noteSlice"
 import isArrayHasValue from "../helper/isArrayHasValue"
 import * as S from "./styled"
-import { HeaderProgress, TitleSetting } from "./styled"
+import { SketchPicker, BlockPicker, CompactPicker } from "react-color"
+import { TitlePage } from "./styled"
 
 const OPTION_SHOW_NOTES = {
   all: "all",
@@ -16,9 +17,15 @@ const OPTION_SHOW_NOTES = {
 
 const NotePage = () => {
   const [optionShowNotes, setOptionShowNotes] = useState(OPTION_SHOW_NOTES.all)
+  const [color, setColor] = useState("#333")
 
   const dispatch = useDispatch()
   const notes = useSelector((state) => state.note.notes)
+  const colorTheme = useSelector((state) => state.note.setting.theme.background)
+
+  const handleColorChange = ({ hex }) => {
+    dispatch(settingTheme({ color: hex }))
+  }
 
   const handleAddNote = () => {
     dispatch(addNote())
@@ -68,49 +75,56 @@ const NotePage = () => {
 
   return (
     <div>
-      <S.HeaderSetting className="px-5">
-        <button className="button is-info" onClick={handleAddNote}>
-          New note <i className="fas fa-plus ml-1" />
-        </button>
-        <S.HeaderProgress
-          className="control mt-2"
-          onChange={(event) => {
-            setOptionShowNotes(event.target.value)
-          }}
-        >
-          <div>
-            <S.TitleSetting>Show note</S.TitleSetting>
-            <label className="radio">
-              <input
-                type="radio"
-                name="optionShow"
-                value={OPTION_SHOW_NOTES.all}
-                checked={optionShowNotes === OPTION_SHOW_NOTES.all}
-              />
-              All
-            </label>
-            <label className="radio">
-              <input
-                type="radio"
-                name="optionShow"
-                value={OPTION_SHOW_NOTES.progress}
-                checked={optionShowNotes === OPTION_SHOW_NOTES.progress}
-              />
-              In progress
-            </label>
-            <label className="radio">
-              <input
-                type="radio"
-                name="optionShow"
-                value={OPTION_SHOW_NOTES.done}
-                checked={optionShowNotes === OPTION_SHOW_NOTES.done}
-              />
-              Done
-            </label>
-          </div>
-        </S.HeaderProgress>
+      <S.TitlePage>Note app - remember for you</S.TitlePage>
+      <S.HeaderSetting className="px-5 is-flex is-justify-content-space-between">
+        <div>
+          <button className="button is-info" onClick={handleAddNote}>
+            New note <i className="fas fa-plus ml-1" />
+          </button>
+          <S.HeaderProgress
+            className="control mt-2"
+            onChange={(event) => {
+              setOptionShowNotes(event.target.value)
+            }}
+          >
+            <div>
+              <S.TitleSetting>Show note</S.TitleSetting>
+              <label className="radio">
+                <input
+                  type="radio"
+                  name="optionShow"
+                  value={OPTION_SHOW_NOTES.all}
+                  checked={optionShowNotes === OPTION_SHOW_NOTES.all}
+                />
+                All
+              </label>
+              <label className="radio">
+                <input
+                  type="radio"
+                  name="optionShow"
+                  value={OPTION_SHOW_NOTES.progress}
+                  checked={optionShowNotes === OPTION_SHOW_NOTES.progress}
+                />
+                In progress
+              </label>
+              <label className="radio">
+                <input
+                  type="radio"
+                  name="optionShow"
+                  value={OPTION_SHOW_NOTES.done}
+                  checked={optionShowNotes === OPTION_SHOW_NOTES.done}
+                />
+                Done
+              </label>
+            </div>
+          </S.HeaderProgress>
+        </div>
+        <div className="is-flex">
+          <S.TitleSetting>Choose color table note</S.TitleSetting>
+          <CompactPicker color={colorTheme} onChangeComplete={handleColorChange} />
+        </div>
       </S.HeaderSetting>
-      <S.TableNote className="is-flex is-flex-wrap-wrap">
+      <S.TableNote className="is-flex is-flex-wrap-wrap" theme={colorTheme}>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId="droppable" direction="horizontal">
             {(provided, snapshot) => (
