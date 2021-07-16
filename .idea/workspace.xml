@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e493a13-8ef7-42d6-bc78-edfbdefd3f3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,10 @@
       <workItem from="1625540602625" duration="9804000" />
       <workItem from="1625643362296" duration="782000" />
       <workItem from="1625736517204" duration="1352000" />
-      <workItem from="1625791686698" duration="6248000" />
+      <workItem from="1625791686698" duration="7702000" />
+      <workItem from="1626069379433" duration="1012000" />
+      <workItem from="1626137377967" duration="93000" />
+      <workItem from="1626406719748" duration="434000" />
     </task>
     <servers />
   </component>
@@ -91,20 +94,9 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/src/counterSlice.js</url>
-          <line>18</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/src/counterSlice.js</url>
-          <line>20</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Container/NotePage.js</url>
           <line>34</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
